@@ -1,0 +1,5 @@
+bootstrapはcssのような感じ。デザイン。
+ npm install bootstrap@4.0.0 --save
+ npm install popper.js@1.14.0 --save
+ 両方必要。じゃないとエラーおこす。
+ 各pugファイルにbootstrapの書き方でスタイルしていく。
