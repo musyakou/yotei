@@ -132,7 +132,7 @@ router.get('/:scheduleId', authenticationEnsurer, (req, res, next) => {
   });
 });
 
-router.get('/:scheduleId/edit', authenticationEnsurer, (req, res, next) => {　//ここへアクセスがあったらデータを取ってきて
+router.get('/:scheduleId/edit', authenticationEnsurer, csrfProtection, (req, res, next) => {　//ここへアクセスがあったらデータを取ってきて
   Schedule.findOne({
     where: {
       scheduleId: req.params.scheduleId
