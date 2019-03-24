@@ -143,7 +143,7 @@ describe('/schedules/:scheduleId/users/:userId/comments', () => {
           const createdSchedulePath = res.headers.location;
           const scheduleId = createdSchedulePath.split('/schedules/')[1];
           // 更新がされることをテスト
-          const userId = 0;
+          // const userId = 0;
           request(app)
             .post(`/schedules/${scheduleId}/users/${userId}/comments`)
             .send({ comment: 'testcomment' })
@@ -185,7 +185,6 @@ describe('/schedules/:scheduleId/users/:userId/comments', () => {
 //     });
 //   });
 // }↓　promiseによってインデント深くならないようにした記述がこちら。
-
 describe('/schedules/:scheduleId?edit=1', () => {
   before(() => {
     passportStub.install(app);
